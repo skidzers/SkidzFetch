@@ -1,0 +1,35 @@
+#![allow(unused)]
+use colored::Colorize;
+use std::fmt::Display;
+use sysinfo::{
+    System
+  };
+
+// find me a fine ART!
+fn main(){
+    let mut sys = System::new_all();
+  
+    let ascii = include_str!(".././ascii/tux.txt");
+    
+    sys.refresh_all();
+    // SYS INFO 
+    let os_value = System::name().unwrap();
+    let os_label = "OS:".green().bold();
+     // user info
+    let user_label = "USER:".green().bold();
+    let uname  = whoami::username().unwrap();
+    //...
+    //colorize!
+    
+    // Print output
+  let format = format!("{}      {:#?}\n{}    {:#?}", 
+                        os_label, os_value, 
+                        user_label, uname);
+  println!("{} {:-<10}", format, ascii);
+  color();
+}
+// get za colors
+fn color(){
+    println!("{} {} {} {}", "(*v)<".green(), "(*v)<".red(), "(*v)<".blue(), "(*v)<".yellow());
+}
+
