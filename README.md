@@ -24,4 +24,6 @@
 git clone https://github.com/skidzers/SkidzFetch.git
 cd SkidzFetch
 cargo build --release
+# Or
+cargo install --path .
 ```
