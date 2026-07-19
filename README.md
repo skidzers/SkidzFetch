@@ -19,3 +19,9 @@
 </p>
 <h3 align="center">Building
 </h3>
+
+```
+git clone https://github.com/skidzers/SkidzFetch.git
+cd SkidzFetch
+cargo build --release
+```
