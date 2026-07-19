@@ -1,5 +1,5 @@
 [package]
-name = "skidfetch_rust"
+name = "sfetch"
 version = "0.1.0"
 edition = "2024"
 
